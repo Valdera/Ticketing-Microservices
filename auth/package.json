@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node-dev --poll src/index.ts",
-    "test": "jest --watchAll --no-cache"
+    "test": "jest --watchAll --no-cache",
+    "test-clear-cache": "jest --watchAll --no-cache --clearCache"
   },
   "jest": {
     "preset": "ts-jest",
@@ -34,8 +35,13 @@
     "@types/jest": "^26.0.24",
     "@types/supertest": "^2.0.11",
     "jest": "^27.0.6",
-    "mongodb-memory-server": "^7.3.5",
+    "mongodb-memory-server": "6.5.1",
     "supertest": "^6.1.4",
     "ts-jest": "^27.0.4"
+  },
+  "config": {
+    "mongodbMemoryServer": {
+      "version": "latest"
+    }
   }
 }
